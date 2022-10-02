@@ -70,17 +70,17 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    function appointment() {
+   public function appointment() {
 
         return $this->hasMany('App\Models\Operational\Appointment', 'user_id');
     }
 
-    function role_user() {
+   public function role_user() {
 
         return $this->hasMany('App\Models\ManagementAccess\RoleUser', 'user_id');
     }
 
-    function detail_user() {
+  public function detail_user() {
 
         return $this->hasOne('App\Models\ManagementAccess\DetailUser', 'user_id');
     }
